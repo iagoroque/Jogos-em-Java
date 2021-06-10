@@ -57,10 +57,10 @@ public class JogoDaVelha {
 			menu.menu(); // Chama o m�todo do menu() para aparecer o menu.
 			break;
 		default: // Encerra o jogo por aqui mesmo, agradecendo-o por ter jogado e mostrando os cr�ditos.
-			System.out.println("Encerrado, obrigado por jogar! :D\n\n\n\t �---< Desenvolvedores"
-					+ " >---�\n\n   �   Claubson Santos // @oninho_s     �\n   �   Enzo Gama       // @enzox7       �\n"
-					+ "   �   Iago Roque      // @iagorockque  �\n   �   Kevin Vasques   // @kevinvasques_�"
-					+ "\n   �   Lucas Emanuel   // @elucasouza   �");
+			System.out.println("Encerrado, obrigado por jogar! :D\n\n\n\t    §---< Desenvolvedores"
+			+ " >---§\n\n     §   Claubson Santos // @oninho_s       §\n     §   Enzo Gama       // @enzox7         §\n"
+			+ "     §   Iago Roque      // @iagorockque    §\n     §   Kevin Vasques   // @kevinvasques_  §"
+			+ "\n     §   Lucas Emanuel   // @elucasouza     §\n\n §-< https://github.com/iagoroque/Jogos-em-Java >-§");
 			break;
 		}
 	}

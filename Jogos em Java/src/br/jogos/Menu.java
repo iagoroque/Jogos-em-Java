@@ -32,16 +32,16 @@ public class Menu {
 			jogoV.start();
 			break;
 		case 4:
-			System.out.println("Encerrado, obrigado por jogar! :D\n\n\n\t �---< Desenvolvedores"
-					+ " >---�\n\n   �   Claubson Santos // @oninho_s     �\n   �   Enzo Gama       // @enzox7       �\n"
-					+ "   �   Iago Roque      // @iagorockque  �\n   �   Kevin Vasques   // @kevinvasques_�"
-					+ "\n   �   Lucas Emanuel   // @elucasouza   �");
+			System.out.println("Encerrado, obrigado por jogar! :D\n\n\n\t    §---< Desenvolvedores"
+			+ " >---§\n\n     §   Claubson Santos // @oninho_s       §\n     §   Enzo Gama       // @enzox7         §\n"
+			+ "     §   Iago Roque      // @iagorockque    §\n     §   Kevin Vasques   // @kevinvasques_  §"
+			+ "\n     §   Lucas Emanuel   // @elucasouza     §\n\n §-< https://github.com/iagoroque/Jogos-em-Java >-§");
 			break;
 		default:
-			System.out.println("Encerrado.\n\n\n\t �---< Desenvolvedores"
-					+ " >---�\n\n   �   Claubson Santos // @oninho_s     �\n   �   Enzo Gama       // @enzox7       �\n"
-					+ "   �   Iago Roque      // @iagorockque  �\n   �   Kevin Vasques   // @kevinvasques_�"
-					+ "\n   �   Lucas Emanuel   // @elucasouza   �");
+			System.out.println("Encerrado.\n\n\n\t    §---< Desenvolvedores"
+			+ " >---§\n\n     §   Claubson Santos // @oninho_s       §\n     §   Enzo Gama       // @enzox7         §\n"
+			+ "     §   Iago Roque      // @iagorockque    §\n     §   Kevin Vasques   // @kevinvasques_  §"
+			+ "\n     §   Lucas Emanuel   // @elucasouza     §\n\n §-< https://github.com/iagoroque/Jogos-em-Java >-§");
 			break;
 		}
 	}
