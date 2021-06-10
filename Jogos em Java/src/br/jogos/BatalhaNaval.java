@@ -25,8 +25,8 @@ public class BatalhaNaval {
 	}
     
     public static void start() {
-    	System.out.println("\n\t~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\t�---<| BATALHA NAVAL |>---�\n\t~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-        obterNomesDosJogadores();                                                  //~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    	System.out.println("\n\t~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\t§---<| BATALHA NAVAL |>---§\n\t~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+        obterNomesDosJogadores();
         obterTamanhoDosTabuleiros();  
         calcularQuantidadeMaximaDeNaviosNoJogo();
         iniciandoOsTamanhosDosTabuleiros();
@@ -38,31 +38,31 @@ public class BatalhaNaval {
             exibirTabuleirosDosJogadores();  
             if (acaoDoJogador()) {
                 if (naviosJogador2 <= 0) {
-                    System.out.println("\n\t�---<| " + nomeJogador1 + " venceu o jogo! |>---�\n");
+                    System.out.println("\n\t§---<| " + nomeJogador1 + " venceu o jogo! |>---§\n");
                     break;
                 }
                 // Verifico fim do jogo
                 acaoDoComputador();
                 if (naviosJogador1 <= 0) {
-                    System.out.println("\n\t�---<| " + nomeJogador2 + " venceu o jogo! |>---�\n");
+                    System.out.println("\n\t§---<| " + nomeJogador2 + " venceu o jogo! |>---§\n");
                     break;
                 }
             }
 
         }while (jogoAtivo);
         exibirTabuleirosDosJogadores();
-        System.out.println("\n*Agora digite o n�mero referente a sua escolha:\n0 - Jogar novamente\n1 - Voltar para o menu\n2 - Encerrar");
+        System.out.println("\n*Agora digite o número referente a sua escolha:\n0 - Jogar novamente\n1 - Voltar para o menu\n2 - Encerrar");
 		int escolhafinal = input.nextInt();
-		Menu menu = new Menu(); // Defino o m�todo menu() da Classe Menu para poder cham�-lo no switch case.
+		Menu menu = new Menu(); // Defino o método menu() da Classe Menu para poder chamá-lo no switch case.
 		switch (escolhafinal) {
 		case 0:
-			start(); // Chama o m�todo do jogo da Forca novamente para ser executado.
+			start(); // Chama o método do jogo da Forca novamente para ser executado.
 			break;
 		case 1:
 			System.out.println("\n\n");
-			menu.menu(); // Chama o m�todo do menu() para aparecer o menu.
+			menu.menu(); // Chama o método do menu() para aparecer o menu.
 			break;
-		default: // Encerra o jogo por aqui mesmo, agradecendo-o por ter jogado e mostrando os cr�ditos.
+		default: // Encerra o jogo por aqui mesmo, agradecendo-o por ter jogado e mostrando os créditos.
 			System.out.println("Encerrado, obrigado por jogar! :D\n\n\n\t    §---< Desenvolvedores"
             + " >---§\n\n     §   Claubson Santos // @oninho_s       §\n     §   Enzo Gama       // @enzox7         §\n"
             + "     §   Iago Roque      // @iagorockque    §\n     §   Kevin Vasques   // @kevinvasques_  §"
@@ -143,7 +143,7 @@ public class BatalhaNaval {
 		Scanner in = new Scanner (System.in);
 		int novoTabuleiro2[][] = retornarNovoTabuleiroVazio();
 		int x= 0, y= 0;
-		System.out.println("Posicione seus barcos usando n�meros : ");
+		System.out.println("Posicione seus barcos usando números : ");
 		for (int i = 0; i < 14; i++) {
 			System.out.print("\n"+i+") Linha  : ");
 			x = in.nextInt();
@@ -151,7 +151,7 @@ public class BatalhaNaval {
 			y = in.nextInt();
 			novoTabuleiro2 [x][y] = NAVIO;
 		}
-		System.out.println("Digite a letra e o n�mero para atirar (O numero de 1 a 9 dever� ser acompanhado de 0) : ");
+		System.out.println("Digite a letra e o número para atirar (O numero de 1 a 9 deverá ser acompanhado de 0) : ");
 
 		return novoTabuleiro2;
 
@@ -214,19 +214,19 @@ public class BatalhaNaval {
         boolean retorno = true;
         if (posicoes[0] > tamanhoX -1) {
             retorno = false;
-            System.out.println("A posicao das letras n�o pode ser maior que " + (char)(tamanhoX + 64));
+            System.out.println("A posicao das letras não pode ser maior que " + (char)(tamanhoX + 64));
         }
 
         if (posicoes[1] > tamanhoY) {
             retorno = false;
-            System.out.println("A posicao num�rica n�o pode ser maior que " + tamanhoY);
+            System.out.println("A posicao numérica não pode ser maior que " + tamanhoY);
         }
         
         return retorno;
     }
     
     public static String receberValorDigitadoPeloJogador() {
-        System.out.println("Digite a posi��o do seu tiro:");
+        System.out.println("Digite a posição do seu tiro:");
         return input.next();
     }
     
@@ -249,19 +249,19 @@ public class BatalhaNaval {
             if (tabuleiroJogador2[posicoes[POSICAO_X]][posicoes[POSICAO_Y]] == NAVIO) {
                 tabuleiroJogador2[posicoes[POSICAO_X]][posicoes[POSICAO_Y]] = ACERTOU_TIRO;
                 naviosJogador2--;
-                System.out.println("Voc� acertou um navio!");
+                System.out.println("Você acertou um navio!");
             } else {
                 tabuleiroJogador2[posicoes[POSICAO_X]][posicoes[POSICAO_Y]] = ERROU_TIRO;
-                System.out.println("Voc� errou o tiro!");
+                System.out.println("Você errou o tiro!");
             }
         } else {
             if (tabuleiroJogador1[posicoes[POSICAO_X]][posicoes[POSICAO_Y]] == NAVIO) {
                 tabuleiroJogador1[posicoes[POSICAO_X]][posicoes[POSICAO_Y]] = ACERTOU_TIRO;
                 naviosJogador1--;
-                System.out.println("Voc� acertou um navio!");
+                System.out.println("Você acertou um navio!");
             } else {
                 tabuleiroJogador1[posicoes[POSICAO_X]][posicoes[POSICAO_Y]] = ERROU_TIRO;
-                System.out.println("Voc� errou o tiro!");
+                System.out.println("Você errou o tiro!");
             }
         } 
     }
@@ -277,7 +277,7 @@ public class BatalhaNaval {
                 acaoValida = false;
             }
         } else {
-            System.out.println("Posi��o inv�lida");
+            System.out.println("Posição inválida");
             acaoValida = false;
         }
         return acaoValida;

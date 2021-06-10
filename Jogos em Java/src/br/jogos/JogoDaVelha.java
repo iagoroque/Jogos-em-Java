@@ -16,9 +16,9 @@ public class JogoDaVelha {
 
 		Scanner ler = new Scanner(System.in);
 		
-		System.out.println("\n\t###########################\n\t�---<| JOGO DA VELHA |>---�\n\t###########################");
+		System.out.println("\n\t###########################\n\t§---<| JOGO DA VELHA |>---§\n\t###########################");
 		while (jogoAtivo == -1) {
-			System.out.println("\n� Vez do Jogador [" + jogador[i] + "]\n");
+			System.out.println("\nÉ Vez do Jogador [" + jogador[i] + "]\n");
 			printGame(tabuleiro);
 			// entrada de dados
 			System.out.print("\nDigite a linha(0-2) :");
@@ -41,22 +41,22 @@ public class JogoDaVelha {
 		if (jogoAtivo == 0)
 			System.out.println("O jogo deu Velha!");
 		else if (jogoAtivo == 1)
-			System.out.println("\n\t�---<| O jogador [O] ganhou a partida! |>---�\n");
+			System.out.println("\n\t§---<| O jogador [O] ganhou a partida! |>---§\n");
 		else
-			System.out.println("\n\t�---<| O jogador [X] ganhou a partida! |>---�\n");
+			System.out.println("\n\t§---<| O jogador [X] ganhou a partida! |>---§\n");
 
-		System.out.println("*Agora digite o n�mero referente a sua escolha:\n0 - Jogar novamente\n1 - Voltar para o menu\n2 - Encerrar");
+		System.out.println("*Agora digite o número referente a sua escolha:\n0 - Jogar novamente\n1 - Voltar para o menu\n2 - Encerrar");
 		int escolhafinal = ler.nextInt();
-		Menu menu = new Menu(); // Defino o m�todo menu() da Classe Menu para poder cham�-lo no switch case.
+		Menu menu = new Menu(); // Defino o método menu() da Classe Menu para poder chamá-lo no switch case.
 		switch (escolhafinal) {
 		case 0:
-			start(); // Chama o m�todo do jogo da Forca novamente para ser executado.
+			start(); // Chama o método do jogo da Forca novamente para ser executado.
 			break;
 		case 1:
 			System.out.println("\n\n");
-			menu.menu(); // Chama o m�todo do menu() para aparecer o menu.
+			menu.menu(); // Chama o método do menu() para aparecer o menu.
 			break;
-		default: // Encerra o jogo por aqui mesmo, agradecendo-o por ter jogado e mostrando os cr�ditos.
+		default: // Encerra o jogo por aqui mesmo, agradecendo-o por ter jogado e mostrando os créditos.
 			System.out.println("Encerrado, obrigado por jogar! :D\n\n\n\t    §---< Desenvolvedores"
 			+ " >---§\n\n     §   Claubson Santos // @oninho_s       §\n     §   Enzo Gama       // @enzox7         §\n"
 			+ "     §   Iago Roque      // @iagorockque    §\n     §   Kevin Vasques   // @kevinvasques_  §"
@@ -77,9 +77,9 @@ public class JogoDaVelha {
 	}
 
 	private static boolean step(char[][] tabuleiro, int lin, int col, char jogador) {
-		// se a posicao tiver vazia
+		// se a posição tiver vazia
 		if (tabuleiro[lin][col] == '_') {
-			// troc o sinal de (-) pela jogada
+			// troca o sinal de (-) pela jogada
 			tabuleiro[lin][col] = jogador;
 			return true;
 		}
